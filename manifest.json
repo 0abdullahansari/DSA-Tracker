@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "LeetCode Event Listener",
+    "version": "1.0",
+    "permissions": [
+      "activeTab",
+      "storage",
+      "tabs"
+    ],
+    "backgroud" : {
+      "service_worker": "backgroud.js",
+      "type": "module"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    }
+}
